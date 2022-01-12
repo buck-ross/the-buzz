@@ -9,6 +9,10 @@
 const general = require('./src/general');
 const users = require('./src/users');
 
+// Establish the restore point:
+const createResetPoint = require('./src/db').createResetPoint;
+createResetPoint(general);
+
 // Export all available database methods & handlers to the rest of the application:
 module.exports = {
 	general,
