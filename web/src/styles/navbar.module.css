@@ -1,0 +1,22 @@
+.appbar {
+	background-color: yellow;
+	color: black;
+}
+
+.title {
+	font-style: italic;
+}
+
+.nav {
+	margin-left: 5%;
+}
+
+.nav a {
+	color: darkgray;
+	font-weight: bold;
+}
+
+.nav a.selected {
+	color: black;
+	text-decoration: underline;
+}

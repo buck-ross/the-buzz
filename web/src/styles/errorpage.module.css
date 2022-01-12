@@ -1,0 +1,12 @@
+.errorPage h1 {
+	text-decoration: underline;
+}
+
+.errorPage b {
+	color: red;
+}
+
+.errorPage a {
+	color: blue;
+	text-decoration: underline;
+}

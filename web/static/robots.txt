@@ -1,0 +1,4 @@
+# Prevent search engines from performing web-crawling on any API endpoint:
+User-agent: AdsBot-Google
+User-agent: *
+Disallow: /api/

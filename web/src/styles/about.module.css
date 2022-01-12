@@ -1,0 +1,17 @@
+.title {
+	font-style: italic;
+}
+
+/*
+* The "@media" directive below allows you to define styles which will only by applied
+* if the page is viewed on a device with a wide screen.
+* To write rules which only apply to small-screen devices, simply replace "min-width"
+* with "max-width" in the directive below.
+*/
+@media only screen and (min-width: 600px) {
+	/* On wide screen devices, the paragraphs should have some air-space around the sides. */
+	.about p {
+		padding-left: 20%;
+		width: 60%;
+	}
+}
