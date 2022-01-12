@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { StyledEngineProvider } from '@mui/material/styles';
 import Home from '@/views/Home';
 import About from '@/views/About';
+import UsersList from '@/views/UsersList';
+import UserProfile from '@/views/UserProfile';
 import PageNotFound from '@/views/PageNotFound';
 
 /**
@@ -17,6 +19,8 @@ class App extends React.Component {
 					<Switch>
 						<Route exact path="/" component={Home}/>
 						<Route exact path="/about" component={About}/>
+						<Route exact path="/users" component={UsersList}/>
+						<Route exact path="/users/:email" component={UserProfile}/>
 						<Route path="*" component={PageNotFound}/>
 					</Switch>
 				</Router>

@@ -1,0 +1,17 @@
+.list {
+	display: inline-block;
+	width: 100%;
+}
+
+.userCard {
+	margin: 5pt 0pt;
+	padding: 15pt 0pt;
+	text-align: center;
+	width: 100%;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	margin: 10pt 0pt;
+}

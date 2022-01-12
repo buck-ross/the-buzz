@@ -1,0 +1,25 @@
+.profile h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.profile h3 a {
+	font-weight: normal;
+}
+
+.editButton, .deleteButton {
+	background-color: yellow;
+	color: black;
+	margin: 3px;
+}
+
+.deleteButton {
+	background-color: red;
+}
+
+.delete {
+	background-color: red;
+	color: white;
+	margin-top: 2em;
+}

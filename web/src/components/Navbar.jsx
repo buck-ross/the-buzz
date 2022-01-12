@@ -32,6 +32,9 @@ export default class Navbar extends React.Component {
 							<Button component={NavLink} activeClassName={styles.selected} exact to='/'>
 								Home
 							</Button>
+							<Button component={NavLink} activeClassName={styles.selected} exact to='/users'>
+								Users
+							</Button>
 							<Button component={NavLink} activeClassName={styles.selected} exact to='/about'>
 								About
 							</Button>
