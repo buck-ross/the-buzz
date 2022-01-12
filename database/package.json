@@ -1,0 +1,31 @@
+{
+	"name": "the-buzz-database",
+	"private": true,
+	"version": "0.1.0",
+	"description": "A CLI to interact with the students' databases",
+	"bin": "./database-cli.js",
+	"main": "./index.js",
+	"scripts": {
+		"lint": "eslint --ignore-pattern node_modules --fix .",
+		"start": "node database-cli.js",
+		"test": "jest ./tests/**.spec.js"
+	},
+	"author": "Buckley Ross <buckleyross42+survival-guide@gmail.com>",
+	"license": "ISC",
+	"dependencies": {
+		"inquirer": "^8.1.0",
+		"pg": "^8.6.0"
+	},
+	"devDependencies": {
+		"eslint": "^7.30.0",
+		"eslint-plugin-jest": "^24.3.6",
+		"jest": "^27.0.6",
+		"mock-inquirer": "^1.0.3",
+		"pg-mem": "^1.9.9"
+	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"<rootDir>/tests/setup.js"
+		]
+	}
+}
