@@ -1,0 +1,24 @@
+{
+	"name": "the-buzz-backend",
+	"private": true,
+	"version": "0.1.0",
+	"description": "An API server to host students' content",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint --ignore-pattern node_modules --fix .",
+		"start": "node index.js",
+		"test": "jest ./tests/**.spec.js"
+	},
+	"author": "Buckley Ross <buckleyross42+survival-guide@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^7.30.0",
+		"eslint-plugin-jest": "^24.3.6",
+		"jest": "^27.0.6"
+	},
+	"dependencies": {
+		"connect-history-api-fallback": "^1.6.0",
+		"express": "^4.17.1",
+		"the-buzz-database": "file:../database"
+	}
+}
