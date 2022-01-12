@@ -1,7 +1,9 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
+import '../services/users.dart';
 import '../views/about.dart';
 import '../views/home.dart';
+import '../views/usersList.dart';
 
 /**
 * The `NavDrawer` widget provides the left-side navigation panel of the app
@@ -31,6 +33,17 @@ class NavDrawer extends Drawer {
 					onTap: () {
 						Navigator.pushReplacement(context, new MaterialPageRoute(
 							builder: (_) => new HomePage(title: 'The Buzz')
+						));
+					}
+				),
+				ListTile(
+					title: const Text('Users'),
+					onTap: () {
+						Navigator.pushReplacement(context, new MaterialPageRoute(
+							builder: (_) => new UsersList(
+								// Pass the UserService singleton object into the widget:
+								userService: UserService()
+							)
 						));
 					}
 				),
