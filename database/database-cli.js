@@ -13,6 +13,7 @@ const db = require('./src/db').pool;
 
 // Import all sub-menus:
 const generalMenu = require('./src/generalMenu');
+const usersMenu = require('./src/usersMenu');
 
 // Define the main menu questions:
 async function mainMenu() {
@@ -29,6 +30,11 @@ async function mainMenu() {
 					short: 'general actions',
 					value: 'general'
 				},
+				{
+					// Give the user an option to interact with `db.users`:
+					name: 'access users',
+					value: 'users'
+				},
 				new inquirer.Separator(), // Creates a line separating the choices at the top from these choices
 				'exit'
 			]
@@ -40,6 +46,10 @@ async function mainMenu() {
 		// If the user chooses to interact with `db.general`, delegate the task to the `generalMenu` module:
 		case 'general':
 			return await generalMenu();
+
+		// If the user chooses to interact with `db.users`, delegate the task to the `usersMenu` module:
+		case 'users':
+			return await usersMenu();
 	}
 
 	// If "exit" was selected, simply exit the program:

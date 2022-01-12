@@ -7,8 +7,10 @@
 
 // Import all database handlers:
 const general = require('./src/general');
+const users = require('./src/users');
 
 // Export all available database methods & handlers to the rest of the application:
 module.exports = {
-	general
+	general,
+	users
 };
