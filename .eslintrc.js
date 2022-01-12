@@ -46,6 +46,7 @@ module.exports = {
 			'warn',
 			{
 				anonymous: 'never',
+				asyncArrow: 'always',
 				named: 'never'
 			}
 		]
