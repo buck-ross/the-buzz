@@ -7,7 +7,8 @@ const express = require('express');
 const history = require('connect-history-api-fallback');
 const db = require('the-buzz-database');
 
-// TODO: Load all sub-routers:
+// Load all sub-routers:
+const usersApi = require('./src/users');
 
 // Set application constants:
 const app = express();
@@ -15,7 +16,8 @@ const port = process.env['PORT'] || 5000;
 const staticDir = process.env['STATIC_ASSET_DIR'] || '../web/dist';
 const staticMiddleware = express.static(staticDir);
 
-// TODO: Serve all of the sub-routers over the appropriate API routes:
+// Serve all of the sub-routers over the appropriate API routes:
+app.use('/api/users', usersApi);
 
 // Serve static assets by default, if no corresponding API route exists:
 app.use(staticMiddleware);
